@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
+    "prod": "vite --mode prod",
+    "build": "vite build--",
+    "build:dev": "vite build --mode dev",
     "preview": "vite preview",
     "test:unit": "vitest",
     "test:e2e": "start-server-and-test preview http://localhost:4173 'cypress run --e2e'",
@@ -16,6 +18,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "axios": "^1.7.7",
     "concurrently": "^9.0.1",
     "json-server": "^1.0.0-beta.3",
     "pinia": "^2.1.7",
@@ -42,6 +45,7 @@
     "npm-run-all2": "^6.2.0",
     "postcss": "^8.4.47",
     "prettier": "^3.2.5",
+    "sass-embedded": "^1.79.4",
     "start-server-and-test": "^2.0.4",
     "tailwindcss": "^3.4.13",
     "typescript": "~5.4.0",
